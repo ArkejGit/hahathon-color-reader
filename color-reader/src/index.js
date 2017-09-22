@@ -5,8 +5,24 @@ import './index.css';
 class ColorReader extends React.Component {
   render() {
     return (
-      <div className="ColorReader">
-        ColorReader
+      <div id="colorReader">
+        <div id="inputWrapper">
+        
+        </div>
+        <div id="outputWrapper">
+          <div className="colorFormat">
+          
+          </div>
+          <div className="colorFormat">
+          
+          </div>
+          <div className="colorFormat">
+          
+          </div>
+        </div>
+        <div id="footer">
+
+        </div>
       </div>
     );
   }

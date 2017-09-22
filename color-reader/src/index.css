@@ -1,4 +1,48 @@
+html {
+  height: 100%;
+}
+
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+}
+
+#colorReader {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 5fr 5fr 1fr;
+}
+
+#inputWrapper {
+  border: 1px solid black;
+}
+
+#outputWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid black;
+}
+
+.colorFormat {
+  border: 1px solid black;
+  
+}
+
+#footer {
+  border: 1px solid black;
+}
+
+/* Medium devices (tablets, 768px and down)*/
+@media screen and (max-width: 768px) {
+  #outputWrapper {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    border: 1px solid black;
+  }
 }
