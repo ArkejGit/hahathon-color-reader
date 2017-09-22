@@ -14,8 +14,28 @@ export default class InputForm extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log(this.state.value);
     event.preventDefault();
+    if(this.handleValidation()){
+           console.log(`Color: ${this.state.value}`);
+        }else{
+           console.log("Invalid color format")
+        }
+  }
+
+  handleValidation() {
+    // regex from https://venturedevs.com/color-picker/index.html
+    let REGEX = {
+                HEX: /^#([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})$/,
+                SHORT_HEX: /^#([a-fA-F0-9])([a-fA-F0-9])([a-fA-F0-9])$/,
+                RGB: /^rgb\((\d{1,3}),(\d{1,3}),(\d{1,3})\)$/,
+                HSL: /^hsl\((\d{1,3}),(\d{1,3})%,(\d{1,3})%\)$/
+            };
+    let value = this.state.value;
+
+    return value.match(REGEX.HEX) ||
+           value.match(REGEX.SHORT_HEX) ||
+           value.match(REGEX.RGB) ||
+           value.match(REGEX.HSL);
   }
 
   render() {
