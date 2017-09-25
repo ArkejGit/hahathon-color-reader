@@ -36,6 +36,9 @@ class ColorReader extends React.Component {
         value: '',
         colors: colors         
       });
+
+      document.body.style.backgroundColor = typedColor;
+      
     } else {
       console.log("Invalid color format")
     }
