@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import InputForm from './InputForm.js';
+import ColorDisplayer from './ColorDisplayer.js';
 import './index.css';
 var convert = require('color-convert');
 
@@ -104,13 +105,19 @@ class ColorReader extends React.Component {
         </div>
         <div id="outputWrapper">
           <div className="colorFormat">
-            {this.state.colors.hex}
+            <ColorDisplayer 
+              color={this.state.colors.hex}
+            />            
           </div>
           <div className="colorFormat">
-            {this.state.colors.rgb}
+            <ColorDisplayer 
+              color={this.state.colors.rgb}
+            /> 
           </div>
           <div className="colorFormat">
-            {this.state.colors.hsl}
+            <ColorDisplayer 
+              color={this.state.colors.hsl}
+            /> 
           </div>
         </div>
         <div id="footer">
