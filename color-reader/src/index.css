@@ -5,10 +5,13 @@ html {
 }
 
 body {
-  font: 3vw 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: calc(14px + 1.4vw);
+  color: #696969;
   height: 100%;
   margin: 0;
   box-sizing: border-box;
+  transition: background-color 0.5s;
 }
 
 #root {
@@ -38,11 +41,63 @@ body {
   align-items: center;  
 }
 
+form {
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  font-size: calc(14px + 2vw);
+}
+
+button {
+  font-size: calc(14px + 2vw);
+  width: 50%;
+  color: #696969;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid #696969;
+  transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
+}
+
+button:hover {
+  background-color: #696969;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box {
+  width: 80%;
+  border: 2px solid #696969;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title {
+  background-color: #696969;
+  color: #fff;
+}
+
+.content {
+  background-color: #fff;
+  padding: 10px;
+}
+
 /* Medium devices (tablets, 768px and down)*/
 @media screen and (max-width: 768px) {
   #outputWrapper {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr;
-    border: 1px solid black;
+  }
+
+  .box {
+  width: 50%;
   }
 }

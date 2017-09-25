@@ -4,10 +4,11 @@ const InputForm = (props) => {
     return (
       <form onSubmit={props.onSubmit}>
         <label>
-          Color:
-          <input type="text" value={props.value} onChange={props.onChange} />
+          <input type="text" placeholder="Type color..." value={props.value} onChange={props.onChange} />
         </label>
-        <input type="submit" value="Submit" />
+        <button type="submit">
+          Submit
+        </button>
       </form>
     );
 }
