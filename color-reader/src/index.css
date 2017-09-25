@@ -21,6 +21,9 @@ body {
 
 #inputWrapper {
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #outputWrapper {
@@ -31,7 +34,9 @@ body {
 
 .colorFormat {
   border: 1px solid black;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;  
 }
 
 #footer {
