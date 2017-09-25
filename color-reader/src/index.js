@@ -18,7 +18,7 @@ class ColorReader extends React.Component {
       }
     };
   }
-
+  
   handleChange = e => {
     this.setState({value: e.target.value});
   }
@@ -36,7 +36,6 @@ class ColorReader extends React.Component {
         value: '',
         colors: colors         
       });
-      
     } else {
       console.log("Invalid color format")
     }
@@ -73,11 +72,11 @@ class ColorReader extends React.Component {
     }
     const typedColorFormat = checkFormat(typedColor);
 
-    const channels = typedColor.match(/\d+/g);
+    const channels = typedColorFormat === 'hex' ? typedColor.substr(1) : typedColor.match(/\d+/g);
 
     for (let color in colors) {
       if (colors[color] === typedColorFormat) {
-        colors[color] = channels.join(','); 
+        colors[color] = Array.isArray(channels) ? channels.join(',') : channels; 
       }
       else {
         const convertedColor = convert[typedColorFormat][color](channels);
@@ -101,7 +100,6 @@ class ColorReader extends React.Component {
             onChange={this.handleChange}
             onSubmit={this.handleSubmit}
           />
-          {this.state.typedColor}
         </div>
         <div id="outputWrapper">
           <div className="colorFormat">
