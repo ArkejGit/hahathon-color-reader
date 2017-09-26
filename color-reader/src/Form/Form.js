@@ -1,5 +1,6 @@
 import React from 'react';
 import './Form.css';
+import Button from '../Button/Button.js';
 
 const Form = (props) => {
     return (
@@ -7,9 +8,10 @@ const Form = (props) => {
         <label>
           <input type="text" placeholder="Type color..." value={props.value} onChange={props.onChange} />
         </label>
-        <button type="submit">
-          Submit
-        </button>
+        <Button 
+          text='test'
+          type='submit'
+        />
       </form>
     );
 }
