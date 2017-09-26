@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from '../Form/Form.js';
 import ColorFormat from '../ColorFormat/ColorFormat.js';
+import Footer from '../Footer/Footer.js';
 import './ColorReader.css';
 var convert = require('color-convert');
 
@@ -116,8 +117,7 @@ export default class ColorReader extends React.Component {
           color={this.state.colors.hsl}
           />          
         </div>
-        <div id="footer">
-        </div>
+        <Footer />
       </div>
     );
   }
