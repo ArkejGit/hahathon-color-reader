@@ -10,7 +10,7 @@ const ColorFormat = (props) => {
   return (
     <div className="colorFormat">
       <DisplayBox 
-        title='HEX'
+        title={props.type}
         content={props.color}
       /> 
       { props.color.length > 0 && 

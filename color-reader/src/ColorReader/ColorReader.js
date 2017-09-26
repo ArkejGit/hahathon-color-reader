@@ -109,12 +109,15 @@ export default class ColorReader extends React.Component {
         <div id="outputWrapper">
           <ColorFormat 
           color={this.state.colors.hex}
+          type='HEX'
           />
           <ColorFormat 
           color={this.state.colors.rgb}
+          type='RGB'
           />
           <ColorFormat 
           color={this.state.colors.hsl}
+          type='HSL'
           />          
         </div>
         <Footer />
