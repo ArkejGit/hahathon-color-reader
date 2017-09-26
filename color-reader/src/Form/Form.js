@@ -1,6 +1,7 @@
 import React from 'react';
+import './Form.css';
 
-const InputForm = (props) => {
+const Form = (props) => {
     return (
       <form onSubmit={props.onSubmit}>
         <label>
@@ -13,4 +14,4 @@ const InputForm = (props) => {
     );
 }
 
-export default InputForm;
+export default Form;

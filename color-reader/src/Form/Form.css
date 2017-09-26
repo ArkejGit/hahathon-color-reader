@@ -1,0 +1,11 @@
+form {
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  font-size: calc(14px + 2vw);
+}

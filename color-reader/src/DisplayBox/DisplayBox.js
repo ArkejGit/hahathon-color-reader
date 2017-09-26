@@ -1,16 +1,17 @@
 import React from 'react';
+import './DisplayBox.css';
 
-const ColorDisplayer = (props) => {
+const DisplayBox = (props) => {
     return (
       <div className="box">
       	<div className="title">
-      		TITLE
+      		{ props.title }
       	</div>
       	<div className="content">
-        	{ props.color }
+        	{ props.content }
         </div>
       </div>
     );
 }
 
-export default ColorDisplayer;
+export default DisplayBox;
