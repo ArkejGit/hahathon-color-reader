@@ -1,5 +1,5 @@
 button {
-  font-size: calc(14px + 2vw);
+  font-size: calc(14px + 0.5vw);
   width: 50%;
   color: #696969;
   background-color: #fff;
