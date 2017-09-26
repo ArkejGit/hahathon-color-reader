@@ -3,7 +3,13 @@ import './Footer.css';
 
 const Footer = (props) => {
     return (
-      <div>
+      <div id="footer">
+      <div className="header">
+      Hahathon
+      </div>
+      <div className="content">
+      created by ARKEJ
+      </div>
       </div>
     );
 }
