@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from '../Form/Form.js';
-import DisplayBox from '../DisplayBox/DisplayBox.js';
+import ColorFormat from '../ColorFormat/ColorFormat.js';
 import './ColorReader.css';
 var convert = require('color-convert');
 
@@ -17,11 +17,11 @@ export default class ColorReader extends React.Component {
       }
     };
   }
-  
+
   handleChange = e => {
     this.setState({value: e.target.value});
   }
-
+  
   handleSubmit = e => {
     e.preventDefault();
     const typedColor = this.state.value; 
@@ -93,6 +93,8 @@ export default class ColorReader extends React.Component {
     return colors;
   }
 
+
+
   render() {
     return (
       <div id="colorReader">
@@ -104,27 +106,17 @@ export default class ColorReader extends React.Component {
           />
         </div>
         <div id="outputWrapper">
-          <div className="colorFormat">
-            <DisplayBox 
-              title='HEX'
-              content={this.state.colors.hex}
-            />            
-          </div>
-          <div className="colorFormat">
-            <DisplayBox 
-              title='RGB'
-              content={this.state.colors.rgb}
-            /> 
-          </div>
-          <div className="colorFormat">
-            <DisplayBox 
-              title='HSL'
-              content={this.state.colors.hsl}
-            /> 
-          </div>
+          <ColorFormat 
+          color={this.state.colors.hex}
+          />
+          <ColorFormat 
+          color={this.state.colors.rgb}
+          />
+          <ColorFormat 
+          color={this.state.colors.hsl}
+          />          
         </div>
         <div id="footer">
-
         </div>
       </div>
     );
