@@ -1,12 +1,29 @@
 #footer {
 	font-size: 14px;
 	background-color: #fff;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
 }
 
-.header {
+#footer-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: #696969;
 	color: #fff;
+}
+
+#footer-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#footer-content * {
+	padding: 0 3px 0 3px;	
+}
+
+img {
+	height: 15px;
+	filter: grayscale(100%);
 }
