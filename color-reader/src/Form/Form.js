@@ -9,7 +9,7 @@ const Form = (props) => {
           <input type="text" placeholder="Type color..." value={props.value} onChange={props.onChange} />
         </label>
         <Button 
-          text='test'
+          text='Convert'
           type='submit'
         />
       </form>
