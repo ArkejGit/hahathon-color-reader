@@ -1,12 +1,15 @@
 button {
   font-size: calc(14px + 0.5vw);
-  width: 50%;
   color: #696969;
   background-color: #fff;
   padding: 5px;
   border-radius: 10px;
   border: 2px solid #696969;
   transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
+}
+
+a {
+  padding: 0 15px 0 15px;
 }
 
 button:hover {
