@@ -9,3 +9,7 @@ form {
 input {
   font-size: calc(14px + 2vw);
 }
+
+.error {
+	color: #dc3545;
+}

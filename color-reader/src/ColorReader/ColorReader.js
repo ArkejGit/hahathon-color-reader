@@ -25,6 +25,8 @@ export default class ColorReader extends React.Component {
   
   handleSubmit = e => {
     e.preventDefault();
+    if (this.state.value === '') return;
+
     const typedColor = this.state.value; 
 
     if (this.handleValidation(typedColor)) {      
@@ -40,7 +42,7 @@ export default class ColorReader extends React.Component {
       document.body.style.backgroundColor = typedColor;
       
     } else {
-      console.log("Invalid color format")
+      this.showError();
     }
   }
 
@@ -69,7 +71,7 @@ export default class ColorReader extends React.Component {
     function checkFormat(color) {
       const formats = ['hex','rgb','hsl'];
       let i;
-      if (!color.match(/[#%]/)) { i = 1}
+      if (!color.match(/[#%]/)) { i = 1 }
       else i = color.match(/#/) ? 0 : 2;
       return formats[i];
     }
@@ -94,6 +96,22 @@ export default class ColorReader extends React.Component {
     return colors;
   }
 
+  showError() {
+    const prev = this.state.value;
+
+    this.setState({
+      value: 'Invalid color format',
+      inputError: true
+    });
+
+    setTimeout(() => {
+      this.setState({
+        value: prev,
+        inputError: false
+      })
+    }, 500);
+  }
+
 
 
   render() {
@@ -102,8 +120,10 @@ export default class ColorReader extends React.Component {
         <div id="inputWrapper">
           <Form 
             value={this.state.value}
+            inputError={this.state.inputError}
             onChange={this.handleChange}
             onSubmit={this.handleSubmit}
+
           />
         </div>
         <div id="outputWrapper">

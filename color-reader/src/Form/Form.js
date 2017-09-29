@@ -6,7 +6,7 @@ const Form = (props) => {
     return (
       <form onSubmit={props.onSubmit}>
         <label>
-          <input type="text" placeholder="Type color..." value={props.value} onChange={props.onChange} />
+          <input className={props.inputError ? 'error' : ''} type="text" placeholder="Type color..." value={props.value} onChange={props.onChange} />
         </label>
         <Button 
           text='Convert'
