@@ -8,13 +8,13 @@ button {
   transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
 }
 
-a {
-  padding: 0 15px 0 15px;
-}
-
 button:hover {
   background-color: #696969;
   color: #fff;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a {
+  padding: 0 15px 0 15px;
 }

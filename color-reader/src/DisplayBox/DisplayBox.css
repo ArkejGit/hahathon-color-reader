@@ -1,4 +1,4 @@
-.box {
+.displaybox {
   width: 80%;
   border: 2px solid #696969;
   border-radius: 10px 10px 0 0;
@@ -6,19 +6,19 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.title {
+.displaybox-title {
   background-color: #696969;
   color: #fff;
 }
 
-.content {
+.displaybox-content {
   background-color: #fff;
   padding: 10px;
 }
 
 /* Medium devices (tablets, 768px and down)*/
 @media screen and (max-width: 768px) {
-  .box {
+  .displaybox {
   width: 50%;
   }
 }

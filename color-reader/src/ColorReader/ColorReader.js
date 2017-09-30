@@ -10,6 +10,7 @@ export default class ColorReader extends React.Component {
     super();
     this.state = {
       value: '',
+      inputError: false,
       typedColor: '',
       colors: {
         hex: '',
@@ -68,6 +69,7 @@ export default class ColorReader extends React.Component {
         rgb: 'rgb',
         hsl: 'hsl'
       };
+
     function checkFormat(color) {
       const formats = ['hex','rgb','hsl'];
       let i;
@@ -75,6 +77,7 @@ export default class ColorReader extends React.Component {
       else i = color.match(/#/) ? 0 : 2;
       return formats[i];
     }
+
     const typedColorFormat = checkFormat(typedColor);
 
     const channels = typedColorFormat === 'hex' ? typedColor.substr(1) : typedColor.match(/\d+/g);
@@ -123,7 +126,6 @@ export default class ColorReader extends React.Component {
             inputError={this.state.inputError}
             onChange={this.handleChange}
             onSubmit={this.handleSubmit}
-
           />
         </div>
         <div id="outputWrapper">

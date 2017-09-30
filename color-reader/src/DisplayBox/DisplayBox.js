@@ -3,11 +3,11 @@ import './DisplayBox.css';
 
 const DisplayBox = (props) => {
     return (
-      <div className="box">
-      	<div className="title">
+      <div className="displaybox">
+      	<div className="displaybox-title">
       		{ props.title }
       	</div>
-      	<div className="content">
+      	<div className="displaybox-content">
         	{ props.content }
         </div>
       </div>
